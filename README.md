@@ -5,4 +5,4 @@ A recommender engine that recommends gift categories and products from a recipie
 
 ### Project Motivation
 
-For many people, including myself, finding the perfect gift for someone is a challenging and stressful experience.
+For many people, including myself, finding the perfect gift for someone is a challenging and stressful experience. Fortunately we live in the digital age, where more and more people are sharing information about themselves in social media. I started to wonder: can we streamline the gift giving process by predicting what a user might like based on their social media profile?
