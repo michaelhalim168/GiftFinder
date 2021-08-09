@@ -39,6 +39,7 @@ class OVR_SVC:
     def evaluate_model(self):
         y_predicted = self.model.predict(self.x_test)
         accuracy = self.model.score(self.x_test, self.y_test)
+        return y_predicted, accuracy
 
 
 class TweetCategory:
@@ -71,9 +72,19 @@ class TweetCategory:
         probability = np.exp(p)/np.sum(np.exp(p), axis=1, keepdims=True)
         probability_list = [max(prob) for prob in probability]
 
-        self.predict_df['predicted'] = predicted_category
+        self.predict_df['predicted_label'] = predicted_category
         self.predict_df['probability'] = probability_list
+        self.predict_df['predicted'] = self.predict_df['predicted_label'].apply(lambda x: self.ref[x])
 
         top_categories = self.predict_df[self.predict_df['probability'] >= confidence_thresh]['predicted'].value_counts()[:3]       
 
-        return self.predict_df, top_categories
+        return top_categories
+        
+def user_tweet_df(tweets):
+    all_tweets = []
+    username = tweets[0]._json['user']['screen_name']
+    for tweet in tweets:
+        all_tweets.append(tweet._json['full_text'])
+        
+    df = pd.DataFrame({'user': username, 'Tweet Content': all_tweets})
+    return df
