@@ -90,3 +90,5 @@ print(product_df[product_df['product_name'] == 'Scotch and Bourbon Glasses']['im
         st.markdown(item6_html, unsafe_allow_html=True)
         st.image(image6_link, use_column_width='always')    
     '''
+
+     item3_html = '<p class="title-font">' + item3_text + '</p>'

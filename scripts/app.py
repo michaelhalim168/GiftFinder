@@ -21,10 +21,10 @@ from classifier import user_tweet_df, TweetCategory
 from recommender import output_to_vector, euclidean_rec
 
 #Path of Tweets
-MODEL_PATH = '/Users/michaelhalim/Desktop/Lighthouse Labs/gift-recommender/final-outputs/models/linear_svc_final_model.sav'
-VECTORIZER_PATH = '/Users/michaelhalim/Desktop/Lighthouse Labs/gift-recommender/final-outputs/models/tfidf_vectorizer_final.sav'
-REFERENCE_PATH = '/Users/michaelhalim/Desktop/Lighthouse Labs/gift-recommender/final-outputs/models/reference-dict.pickle'
-PRODUCT_PATH = '/Users/michaelhalim/Desktop/Lighthouse Labs/gift-recommender/final-outputs/datasets/amazon_gift_items_clean.csv'
+MODEL_PATH = '/Users/michaelhalim/Desktop/Projects/gift-recommender/final-outputs/models/linear_svc_final_model.sav'
+VECTORIZER_PATH = '/Users/michaelhalim/Desktop/Projects/gift-recommender/final-outputs/models/tfidf_vectorizer_final.sav'
+REFERENCE_PATH = '/Users/michaelhalim/Desktop/Projects/gift-recommender/final-outputs/models/reference-dict.pickle'
+PRODUCT_PATH = '/Users/michaelhalim/Desktop/Projects/gift-recommender/final-outputs/datasets/amazon_gift_items_clean.csv'
 
 #Define Variables for Data Cleaning
 stopwords = nltk.corpus.stopwords.words('english')
@@ -254,7 +254,7 @@ def main():
         }
         </style>""", unsafe_allow_html=True)
     col.markdown('<p class="font-prop">Who are you buying a gift for?</p>', unsafe_allow_html=True)
-    twitter_handle = col.text_input("Enter Twitter Handle/Username!")
+    twitter_handle = col.text_input("Enter their Twitter Handle/Username!")
     button_format = st.markdown("""
         <style>
         div.stButton > button:first-child {
