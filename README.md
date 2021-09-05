@@ -13,3 +13,6 @@ For many people, including myself, finding the perfect gift for someone is a cha
 
 The web-app prompts the user to enter the public Twitter handle of the person he/she would like to buy a gift for. The web-app then returns some gift categories this person may like as well as a few items related to these categories that this person may like as gifts. If the user sees an item that appears interesting, the web-app redirects the user to the product page on Amazon. So instead of spending hours on Google or Reddit trying to find gifts for someone, a user can use this app and find and purchase the perfect gift in a matter of seconds!
 
+### Project Approach
+
+Step 0: Determine most popular gift topics and its associated subreddits.
