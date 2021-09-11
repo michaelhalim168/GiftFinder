@@ -18,3 +18,5 @@ The web-app prompts the user to enter the public Twitter handle of the person he
 Step 0: Determine most popular gift topics and its associated subreddits.
 
 Step 1: Scrape posts from the different subreddits using PRAW.
+
+Step 2: Clean text data, vectorize using TF-IDF, and use data to train a linear support vector classifier.
